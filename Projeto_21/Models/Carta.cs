@@ -27,11 +27,6 @@ namespace Projeto_21.Models
             get { return Naipe == Naipe.Copas || Naipe == Naipe.Ouros; }
         }
 
-        public string NomeArquivo
-        {
-            get { return $"{ObterRotuloValor()}_{Naipe}.png"; }
-        }
-
         public int ObterPontos()
         {
             if ((Valor == Valor.Q) || (Valor == Valor.J) || (Valor == Valor.K))
