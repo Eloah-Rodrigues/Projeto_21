@@ -52,6 +52,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciadorImagens.cs" />
+    <Compile Include="Models\Banca.cs" />
+    <Compile Include="Models\Baralho.cs" />
+    <Compile Include="Models\Carta.cs" />
+    <Compile Include="Models\Jogador.cs" />
+    <Compile Include="Models\Jogo.cs" />
+    <Compile Include="Models\Naipe.cs" />
+    <Compile Include="Models\ResultadoPartida.cs" />
+    <Compile Include="Models\Valor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
