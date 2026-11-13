@@ -1,0 +1,9 @@
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\bin\Debug\Projeto_21.exe.config
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\bin\Debug\Projeto_21.exe
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\bin\Debug\Projeto_21.pdb
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.csproj.AssemblyReference.cache
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.Properties.Resources.resources
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.csproj.GenerateResource.cache
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.csproj.CoreCompileInputs.cache
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.exe
+C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.pdb
