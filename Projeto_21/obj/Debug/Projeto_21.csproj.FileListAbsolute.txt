@@ -7,3 +7,13 @@ C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projet
 C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.csproj.CoreCompileInputs.cache
 C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.exe
 C:\Users\fdwes\OneDrive\Desktop\Unifesp\POO\Projetos\Projeto_21\obj\Debug\Projeto_21.pdb
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\bin\Debug\Projeto_21.exe.config
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\bin\Debug\Projeto_21.exe
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\bin\Debug\Projeto_21.pdb
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.csproj.AssemblyReference.cache
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.Form1.resources
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.Properties.Resources.resources
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.csproj.GenerateResource.cache
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.csproj.CoreCompileInputs.cache
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.exe
+C:\Users\eloah\OneDrive\Escola - pendrive\POO\21\Projeto_21\obj\Debug\Projeto_21.pdb
