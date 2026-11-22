@@ -6,8 +6,30 @@ using Projeto_21.Models;
 
 namespace Projeto_21
 {
+    /*
+     * CLASSE CartaControl
+     *
+     * É um controle visual personalizado que representa UMA carta na tela.
+     * Herda de Control (HERANÇA), então se comporta como qualquer componente do
+     * Windows Forms e pode ser colocado dentro de um painel.
+     *
+     * Ele guarda a Carta que representa (ASSOCIAÇÃO com a classe Carta) e é
+     * responsável por duas coisas:
+     *  1. DESENHAR a carta, usando a imagem PNG fornecida pelo GerenciadorImagens.
+     *  2. ANIMAR a carta, com dois efeitos: entrada (a carta "abre" ao ser
+     *     distribuída) e virada (a carta oculta da banca é revelada).
+     *
+     * As animações funcionam com um Timer que atualiza um progresso de 0 a 1
+     * e redesenha a carta a cada passo, mudando a largura dela.
+     */
     public class CartaControl : Control
     {
+        /*
+         * Enum ModoAnimacao (interno)
+         *
+         * Indica qual animação está em andamento: Nenhum, Entrada (carta sendo
+         * distribuída) ou Virar (carta sendo revelada).
+         */
         private enum ModoAnimacao { Nenhum, Entrada, Virar }
 
         private readonly Carta _carta;
@@ -16,12 +38,25 @@ namespace Projeto_21
         private ModoAnimacao _modo = ModoAnimacao.Nenhum;
         private float _progresso;
         private readonly System.Windows.Forms.Timer _timer;
-
+        /*
+         * Propriedade Oculta
+         *
+         * Informa se a carta está virada para baixo. O formulário usa para saber
+         * se a carta da banca ainda precisa ser revelada.
+         */
         public bool Oculta
         {
             get { return _oculta; }
         }
-
+        /*
+         * Construtor
+         *
+         * Recebe a carta e se ela deve começar oculta (mostrando o verso). Define o
+         * tamanho (90 x 126), a margem e ativa o desenho próprio com buffer duplo,
+         * que evita tremulação durante a animação. Também cria o Timer: a cada 15
+         * milissegundos ele aumenta o progresso em 0,08; ao chegar em 1 a animação
+         * termina, e se era uma virada a carta passa a ficar descoberta.
+         */
         public CartaControl(Carta carta, bool oculta)
         {
             _carta = carta;
@@ -52,14 +87,24 @@ namespace Projeto_21
         }
 
         //animações
-
+        /*
+         * Método AnimarEntrada
+         *
+         * Inicia a animação de distribuição: a carta aparece abrindo a partir do
+         * centro, da largura mínima até a largura total.
+         */
         public void AnimarEntrada()
         {
             _modo = ModoAnimacao.Entrada;
             _progresso = 0f;
             _timer.Start();
         }
-
+        /*
+         * Método Revelar
+         *
+         * Inicia a animação de virar a carta oculta. Se a carta já estiver
+         * descoberta, não faz nada.
+         */
         public void Revelar()
         {
             if (!_oculta) return;
@@ -67,7 +112,15 @@ namespace Projeto_21
             _progresso = 0f;
             _timer.Start();
         }
-
+        /*
+         * Método CalcularAnimacao
+         *
+         * Decide, em cada instante da animação, quanto a carta está "aberta" na
+         * horizontal (escalaX, de 0 a 1) e se deve mostrar o verso ou a frente.
+         *  - Entrada: a largura cresce de forma suave, mais rápida no começo.
+         *  - Virar: na primeira metade a carta se fecha mostrando o verso; na segunda
+         *    metade ela se abre mostrando a frente. Isso dá a impressão de virar.
+         */
         private void CalcularAnimacao(out float escalaX, out bool mostrarVerso)
         {
             escalaX = 1f;
@@ -93,7 +146,20 @@ namespace Projeto_21
         }
 
         //desenho
-
+        /*
+         * Método OnPaint (sobrescrito)
+         *
+         * É chamado pelo Windows Forms sempre que a carta precisa ser desenhada.
+         * Passos:
+         *  1. Ativa a suavização de bordas e texto.
+         *  2. Calcula a escala horizontal e se deve mostrar o verso ou a frente.
+         *  3. Aplica a escala a partir do centro da carta, que cria o efeito de
+         *     abrir e virar (o valor mínimo 0,02 evita largura zero).
+         *  4. Pede ao GerenciadorImagens a imagem certa e a desenha no tamanho
+         *     do controle.
+         * O trecho comentado abaixo era um desenho alternativo por código, usado se a
+         * imagem não existisse. Foi desativado porque agora usamos as imagens PNG.
+         */
         protected override void OnPaint(PaintEventArgs e)
         {
             var g = e.Graphics;
